@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "checks": {
+    "video_and_audio_present": true,
+    "all_panels_in_order": true,
+    "duration_matches_plan": true,
+    "timeline_contiguous": true,
+    "resolution_matches": true,
+    "audio_video_drift_under_100ms": true,
+    "subtitle_bounds": true,
+    "subtitles_in_order": true,
+    "full_decode": true
+  },
+  "duration": 14.958333,
+  "planned_duration": 14.958333333333334,
+  "panels": 4,
+  "scenes": 4,
+  "mode": "ocr",
+  "warnings": [
+    "当前是画面原文讲读：朗读识别到的文字，不等同于第三人称剧情解说。"
+  ],
+  "scope": "技术自审验证文件、时间轴与素材覆盖；不代表剧情语义或识别文字已人工审定。",
+  "subtitle_timing": "分段字幕按字数在实测配音时长内分配，非逐字强制对齐"
+}

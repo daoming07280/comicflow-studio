@@ -1,0 +1,8 @@
+{
+  "job": "ab5eca50f29e",
+  "corrected_panel": "p00392",
+  "original_text": "し。",
+  "reason": "人工核对原图：人物脸部汗滴被误识别为日文し，本分镜没有可朗读文字。",
+  "completed_clips_preserved": 391,
+  "policy": "Only the first NoAudioReceived with changed punctuation waits 5 seconds; repeated failures and Retry-After keep normal backoff."
+}

@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "checks": {
+    "video_and_audio_present": true,
+    "all_panels_in_order": true,
+    "duration_matches_plan": true,
+    "timeline_contiguous": true,
+    "resolution_matches": true,
+    "audio_video_drift_under_100ms": true,
+    "subtitle_bounds": true,
+    "subtitles_in_order": true,
+    "full_decode": true
+  },
+  "duration": 22.625,
+  "planned_duration": 22.625,
+  "panels": 8,
+  "scenes": 8,
+  "mode": "ocr",
+  "warnings": [],
+  "motion_renderer": "affine-subpixel-v1",
+  "voice": "zh-CN-YunxiNeural",
+  "voice_rate": 1,
+  "tts": "edge",
+  "scope": "技术自审验证文件、时间轴与素材覆盖；不代表剧情语义或识别文字已人工审定。",
+  "subtitle_timing": "分段字幕按字数在实测配音时长内分配，非逐字强制对齐"
+}

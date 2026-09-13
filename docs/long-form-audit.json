@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "checks": {
+    "video_and_audio_present": true,
+    "all_panels_in_order": true,
+    "duration_matches_plan": true,
+    "timeline_contiguous": true,
+    "resolution_matches": true,
+    "audio_video_drift_under_100ms": true,
+    "subtitle_bounds": true,
+    "subtitles_in_order": true,
+    "full_decode": true
+  },
+  "duration": 1663.333333,
+  "planned_duration": 1663.3333333333333,
+  "panels": 40,
+  "scenes": 40,
+  "mode": "manual",
+  "warnings": [],
+  "scope": "技术自审验证文件、时间轴与素材覆盖；不代表剧情语义或识别文字已人工审定。",
+  "subtitle_timing": "分段字幕按字数在实测配音时长内分配，非逐字强制对齐",
+  "fixture": "40 张合成纯色测试图和 41.417 秒测试音重复编排，不是实际漫画剧情质量测试。",
+  "video_duration_seconds": 1663.333333,
+  "audio_duration_seconds": 1663.333,
+  "audio_video_difference_ms": 0.3329999999550637
+}

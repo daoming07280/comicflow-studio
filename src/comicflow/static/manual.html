@@ -1,0 +1,13 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ComicFlow · 使用指南</title><style>body{font:15px/1.9 'Microsoft YaHei',system-ui;max-width:820px;margin:50px auto;background:#141518;color:#dfdfdf;padding:0 24px}h1,h2{color:#eeb277}h2{font-size:20px;margin-top:35px}p,li{color:#bdc0c9}code,pre{background:#23252a;padding:3px 6px;border-radius:4px}pre{padding:20px;overflow:auto;font-size:13px}a{color:#eeb277}.note{border-left:3px solid #eeb277;padding:12px 20px;background:#24201b}</style><a href="/">← 返回工作台</a><h1>把一部漫画，变成你的合集。</h1><p class="note">这是可运行的 MVP。默认功能是中文画面原文讲读与自动剪辑。已支持内置源搜书、选章下载并自动导入。第三人称剧情解说需要视觉模型服务；小说对齐和番外世界观暂未实现。</p><h2>1. 搜索下载或放入漫画</h2><p>默认使用「搜索漫画」：输入书名，搜索漫画狗或 MangaDex，点开版本后选择章节，点击「下载选中章节并导入」。下载完成会自动填入素材和合集名称。可以选择正篇、番外或单行本分组，MangaDex 可以选择译本语言。同一组支持全选和按序号选择范围；首次建议先下载一章。</p><p>「下载与素材库」会显示进度，支持停止、继续下载及再次导入。关闭页面仍会下载；关闭后台后可恢复。未完成的下载不会自动导入。内置源提供的目录不一定完整，连不上时可以切换源或版本。</p><p>选择漫画文件夹、ZIP / CBZ，或者拖入多张图片。文件夹可以包含多个章节，名称中的数字会自然排序（第 2 章在第 10 章前）。不要把整个软件根目录当作漫画目录。内置测试素材可以直接试跑。</p><pre>我的漫画/
+  第01章/
+    001.jpg
+    002.jpg
+  第02章/
+    001.webp</pre><p>长条韩漫会按全宽留白自动分格；没有明显留白时切为连续视窗，原图与切分坐标都会保留。默认 OCR 面向中文及英文，不支持可靠的韩语原版讲读。</p><h2>2. 选择制作方式</h2><ul><li><b>自动讲读：</b>本机识别对白与文字，按图朗读。不添加未证实剧情。</li><li><b>AI 剧情解说：</b>每 5 格生成一次，再对照图片复核一次；逐格校验顺序与覆盖。需要兼容 Chat Completions 的视觉服务。</li><li><b>自备解说：</b>使用自带文案和可选的配音文件，自动剪辑。</li></ul><p>默认 Edge 配音需要联网，无需密钥，会将文案发送到配音服务。Windows 配音无需联网，使用系统安装的中文声音。语速和声音可以自行选择；背景音乐不会添加。</p><h2>3. 制作与审片</h2><p>点击“开始自动制作”。多个任务顺序执行；可以继续导入下一部。支持停止、重启后继续，已经完成的识别、配音和分镜视频会复用。最终导出 MP4、SRT、无损配音、文案、时间轴、自审报告。</p><p>“逐段审片”可以同时查看画面、配音、文案和原始页码。技术自审检查全片解码、完整画面覆盖、音画时长和时间轴连续性，不代表 OCR 或 AI 内容绝对正确。字幕采用分段时长分配，并非逐字对齐。</p><h2>AI 视觉服务配置</h2><p>在软件根目录新建 <code>vision.env</code>，每行一项。重启启动器生效。只有选择 AI 模式才会发送漫画图片。密钥文件只保留在本机，不写进任务文件。</p><pre>COMICFLOW_VISION_BASE_URL=http://127.0.0.1:1234/v1
+COMICFLOW_VISION_MODEL=你的视觉模型名称
+COMICFLOW_VISION_API_KEY=服务需要时填写</pre><p>模型必须支持图片输入与 JSON 输出，接口为 <code>POST /chat/completions</code>。本次交付未配置真实视觉模型，因此 AI 剧情质量未进行实测。</p><h2>自备文案格式</h2><p>先用讲读模式生成，审片页中可见分镜编号。将 <code>narration.json</code> 放在漫画根目录。图片顺序和切分不变时，分镜编号保持稳定。每格需按顺序出现且只出现一次；可把多格放在同一段解说里。</p><pre>{
+  "scenes": [
+    {"panel_ids": ["p00001"], "text": "这里是第一段解说。"},
+    {"panel_ids": ["p00002", "p00003"], "text": "这里是第二段解说。", "audio": "voices/02.wav"}
+  ]
+}</pre><p>提供 audio 时使用自备配音，否则自动合成语音。每段的多个画面均分配音时长；请只为真正对应的内容分组。</p><h2>公开漫画链接下载</h2><p>本版提供 gallery-dl 命令入口下载给定链接，支持范围取决于该上游项目。也可以直接在工作台使用内置源按书名搜索下载。不会自动读取浏览器登录信息。详细命令见项目根目录 README.md。</p><p>下载后将目标目录导入工作台。网站不支持、需要登录或访问失败时会给出错误日志。</p></html>

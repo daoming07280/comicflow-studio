@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "book": "我独自升级",
+  "chapters": 31,
+  "tested_chapter": {
+    "id": "d9109fa8-8fc7-48ee-b6ca-43f979edd4d1",
+    "title": "卷 1 · 第 0 话 · prologue ",
+    "group": "hi",
+    "language": "hi",
+    "pages": 10,
+    "order": 1
+  },
+  "pages": 10,
+  "image_bytes": 297403,
+  "format": ".jpg"
+}

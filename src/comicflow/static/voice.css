@@ -1,0 +1,1 @@
+.voice-audition{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:13px 0}.voice-audition span{font-size:10px;color:#91949d}.voice-audition audio{width:100%;height:34px}.voice-audition button:disabled{opacity:.5;cursor:wait}

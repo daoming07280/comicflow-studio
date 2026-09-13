@@ -1,0 +1,23 @@
+[project]
+name = "comicflow-studio"
+version = "0.2.0"
+description = "本机漫画自动讲读与解说视频制作工作台"
+requires-python = ">=3.11"
+dependencies = ["fastapi", "uvicorn", "python-multipart", "Pillow", "numpy", "rapidocr", "onnxruntime", "edge-tts", "httpx", "gallery-dl", "beautifulsoup4"]
+
+[project.scripts]
+comicflow = "comicflow.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+comicflow = ["static/*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

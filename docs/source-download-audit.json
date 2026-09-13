@@ -1,0 +1,29 @@
+{
+  "state": {
+    "id": "bb289e96a086",
+    "title": "我独自升级",
+    "provider": "dogemanga",
+    "book_id": "iXw1RRDr",
+    "chapter_ids": [
+      "hHC-IU3a"
+    ],
+    "chapters": 1,
+    "completed_chapters": 1,
+    "status": "completed",
+    "progress": 100,
+    "pages": 66,
+    "total_pages": 66,
+    "bytes": 2256798,
+    "source": "D:\\AI\\projects\\codex\\全自动漫画解解说视频\\data\\library\\bb289e96a086\\pages",
+    "message": "已下载 1 章、66 页 · 图片完整性检查通过",
+    "created": 1789221625.481053,
+    "updated": 1789221716.650277
+  },
+  "import": {
+    "source": "D:\\AI\\projects\\codex\\全自动漫画解解说视频\\data\\library\\bb289e96a086\\pages",
+    "title": "我独自升级",
+    "count": 66,
+    "chapters": 1
+  },
+  "passed": true
+}

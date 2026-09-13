@@ -1,0 +1,15 @@
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+data/
+outputs/
+*.log
+.env
+vision.env
+*.egg-info/
+docs/reference/*.jpg
+
+# 参考视频不入库（体积超过 GitHub 限制且为版权内容）
+/*.mp4
+examples/reference_recut/*.jpg

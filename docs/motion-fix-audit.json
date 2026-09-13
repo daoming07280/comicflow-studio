@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "before": {
+    "frames": 120,
+    "centre_peak_to_peak_px": 1.0438951315114338,
+    "max_frame_step_px": 0.9932430064493937
+  },
+  "after": {
+    "frames": 120,
+    "centre_peak_to_peak_px": 0.07555583583600267,
+    "max_frame_step_px": 0.026654581636116278
+  },
+  "method": "5 秒测试画面，中心固定高斯标记；对 H.264 解码后的标记质心逐帧测量。"
+}
